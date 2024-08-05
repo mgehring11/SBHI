@@ -829,7 +829,7 @@ Site Navigation
     }
 
     .home-video-btn .fl-button:before {
-        background-image: url(../images/play-button-mobile.svg);
+        /*background-image: url(../images/play-button-mobile.svg);*/
         width: 24px;
         height: 24px;
         background-size: contain;
@@ -921,27 +921,27 @@ Site Navigation
         }
 
         .home-package-tab .fl-tabs-label:nth-child(1):before {
-            background-image: url(../images/heartbeat-dark.svg);
+            background-image: url(https://sbhi-public.s3.us-east-2.amazonaws.com/images/heartbeat-dark.svg);
         }
 
         .home-package-tab .fl-tabs-label.fl-tab-active:nth-child(1):before {
-            background-image: url(../images/heartbeat.svg);
+            background-image: url(https://sbhi-public.s3.us-east-2.amazonaws.com/images/heartbeat.svg);
         }
 
         .home-package-tab .fl-tabs-label:nth-child(2):before {
-            background-image: url(../images/teeth.svg);
+            background-image: url(https://sbhi-public.s3.us-east-2.amazonaws.com/images/teeth.svg);
         }
 
         .home-package-tab .fl-tabs-label.fl-tab-active:nth-child(2):before {
-            background-image: url(../images/teeth-white.svg);
+            background-image: url(https://sbhi-public.s3.us-east-2.amazonaws.com/images/teeth-white.svg);
         }
 
         .home-package-tab .fl-tabs-label:nth-child(3):before {
-            background-image: url(../images/eye.svg);
+            background-image: url(https://sbhi-public.s3.us-east-2.amazonaws.com/images/eye.svg);
         }
 
         .home-package-tab .fl-tabs-label.fl-tab-active:nth-child(3):before {
-            background-image: url(../images/eye-white.svg);
+            background-image: url(https://sbhi-public.s3.us-east-2.amazonaws.com/images/eye-white.svg);
         }
 
 
@@ -964,7 +964,7 @@ Site Navigation
                 content: '';
                 width: 15px;
                 height: 15px;
-                background-image: url(../images/circle-check.svg);
+                background-image: url(../images/checkmark-blue.png);
                 background-repeat: no-repeat;
                 display: inline-block;
                 margin-right: 8px;
@@ -1205,13 +1205,13 @@ Site Navigation
 
 /* Home Testimonials */
 
-@font-face {
+/*@font-face {
     font-family: 'WestayScript';
     src: url('../fonts/westay/WestayScript.eot');
     src: url('../fonts/westay/WestayScript.eot?#iefix') format('embedded-opentype'), url('../fonts/westay/WestayScript.woff2') format('woff2'), url('../fonts/westay/WestayScript.woff') format('woff'), url('../fonts/westay/WestayScript.ttf') format('truetype'), url('../fonts/westay/WestayScript.svg#WestayScript') format('svg');
     font-weight: normal;
     font-style: normal;
-}
+}*/
 
 .home-testimonial-wrapper {
     position: relative;
@@ -1278,7 +1278,6 @@ Site Navigation
     }
 
     .home-sign-container .fl-heading {
-        font-family: 'WestayScript';
         font-weight: 400;
         font-size: 58px;
     }
@@ -6124,7 +6123,7 @@ body:not(.admin-bar) .page-template-landing-page-two {
     list-style: none;
     list-style-type: none;
     background-color: transparent !important;
-    background: url(https://www.ushealthgroup.com/wp-content/uploads/2020/05/checkmark.png);
+    background: url(https://sbhi-public.s3.us-east-2.amazonaws.com/images/checkmark.png);
     width: 18px !important;
     height: 18px !important;
     top: 4px !important;
@@ -6132,7 +6131,7 @@ body:not(.admin-bar) .page-template-landing-page-two {
 }
 
 .page-template-landing-page-two .checkmark li:before {
-    background: url(https://www.ushealthgroup.com/wp-content/uploads/2020/05/checkmark-blue.png);
+    background: url(https://sbhi-public.s3.us-east-2.amazonaws.com/images/checkmark-blue.png);
 }
 
 .page-template-landing-page-two .red-checkmark li {
@@ -6143,7 +6142,7 @@ body:not(.admin-bar) .page-template-landing-page-two {
     .page-template-landing-page-two .red-checkmark li:before {
         list-style: none;
         list-style-type: none;
-        background: url(https://www.ushealthgroup.com/wp-content/uploads/2020/12/check.png);
+        background: url(https://sbhi-public.s3.us-east-2.amazonaws.com/images/check.png);
         background-size: 28px 28px;
         background-repeat: no-repeat;
         background-position: left center;

@@ -10,14 +10,19 @@
     <title>Affordable Health Coverage Plan Quotes | USHEALTH Group</title>
     <meta name="description" content="USHEALTH Group is a leading health coverage provider, offering affordable and personalized plans for everyone looking for a custom coverage solution." />
     <link rel="canonical" href="https://sbhi.app/" />
+    @{
+    string? page = ViewContext.RouteData.Values["page"] as string; // Values[] produces objects, so cast is needed
+        if ((page != null && page.Contains("index")))
+        {
+            <link rel="prefetch" href="https://sbhi-public.s3.us-east-2.amazonaws.com/images/homepage-header-resaved.jpg" />
+        }
+    }
 
-
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@@justinribeiro/lite-youtube@1.5.0/lite-youtube.js"></script>
 
     <link rel="icon" href="https://sbhi-public.s3.us-east-2.amazonaws.com/SBHI.ico" />
-    <link rel='dns-prefetch' href='//static.addtoany.com' />
-    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
-    <link rel="preload" href="https://sbhi.app/wp-content/plugins/bb-plugin/fonts/fontawesome/5.15.4/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="https://sbhi.app/wp-content/plugins/bb-plugin/fonts/fontawesome/5.15.4/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="https://sbhi-public.s3.us-east-2.amazonaws.com/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="https://sbhi-public.s3.us-east-2.amazonaws.com/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
     <style type="text/css" media="all">
         .wpautoterms-footer {
@@ -36,7 +41,7 @@
                 font-family: Arial, sans-serif;
                 font-size: 14px;
             }</style>
-    <link rel='stylesheet' id='us-health-css' href='https://sbhi-public.s3.us-east-2.amazonaws.com/css/stylesheet.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='us-health-css' href='https://sbhi-public.s3.us-east-2.amazonaws.com/css/StyleSheet.css' type='text/css' media='all' />
     <link rel='stylesheet' id='us-health-css' href='https://sbhi-public.s3.us-east-2.amazonaws.com/css/AllStyles.css' type='text/css' media='all' />
     <link rel='stylesheet' id='us-health-css' href='https://sbhi-public.s3.us-east-2.amazonaws.com/css/mobmenu.css' type='text/css' media='all' />
     <link rel='stylesheet' id='us-health-css' href='https://sbhi-public.s3.us-east-2.amazonaws.com/css/layout-bundle.css' type='text/css' media='all' />
@@ -381,46 +386,7 @@
             line-height: 1.6;
         }
     </style>
-    <link rel='stylesheet' id='wpautoterms_css-css' href='https://sbhi.app/wp-content/plugins/auto-terms-of-service-and-privacy-policy/css/wpautoterms.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='font-awesome-5-css' href='https://sbhi.app/wp-content/plugins/bb-plugin/fonts/fontawesome/5.15.4/css/all.min.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='font-awesome-css' href='https://sbhi.app/wp-content/plugins/bb-plugin/fonts/fontawesome/5.15.4/css/v4-shims.min.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='fl-builder-layout-5-css' href='https://sbhi.app/wp-content/uploads/bb-plugin/cache/5-layout.css?ver=e064dafe0f938fd47c35e0ce434cf630' type='text/css' media='all' />
-    <link rel='stylesheet' id='ultimate-icons-css' href='https://sbhi.app/wp-content/uploads/bb-plugin/icons/ultimate-icons/style.css?ver=2.8.2.2' type='text/css' media='all' />
-    <link rel='stylesheet' id='fl-builder-layout-bundle-81e9a0c21a7264ce98f459ad06e9ee59-css' href='https://sbhi.app/wp-content/uploads/bb-plugin/cache/81e9a0c21a7264ce98f459ad06e9ee59-layout-bundle.css?ver=2.8.2.2-1.4.10' type='text/css' media='all' />
-    <link rel='stylesheet' id='dashicons-css' href='https://sbhi.app/wp-includes/css/dashicons.min.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='custom-css' href='https://sbhi.app/wp-content/themes/us-health/css/allstyles.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='googlefonts-css' href='https://fonts.googleapis.com/css?family=Poppins%3A300%2C400%2C500%2C600%2C700%2C800&#038;display=swap&#038;ver=6.5.5' type='text/css' media='all' />
-    <link rel='stylesheet' id='mm-compiled-options-mobmenu-css' href='https://sbhi.app/wp-content/uploads/dynamic-mobmenu.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='mm-google-webfont-poppins-css' href='//fonts.googleapis.com/css?family=Poppins%3Ainherit%2C400&#038;subset=latin%2Clatin-ext&#038;ver=6.5.5' type='text/css' media='all' />
-    <link rel='stylesheet' id='mm-google-webfont-dosis-css' href='//fonts.googleapis.com/css?family=Dosis%3Ainherit%2C400&#038;subset=latin%2Clatin-ext&#038;ver=6.5.5' type='text/css' media='all' />
-    <link rel='stylesheet' id='addtoany-css' href='https://sbhi.app/wp-content/plugins/add-to-any/addtoany.min.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='cssmobmenu-icons-css' href='https://sbhi.app/wp-content/plugins/mobile-menu/includes/css/mobmenu-icons.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='cssmobmenu-css' href='https://sbhi.app/wp-content/plugins/mobile-menu/includes/css/mobmenu.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='pp-animate-css' href='https://sbhi.app/wp-content/plugins/bbpowerpack/assets/css/animate.min.css' type='text/css' media='all' />
-    <script type="text/javascript" src="https://sbhi.app/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
-    <script type="text/javascript" src="https://sbhi.app/wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
-    <script type="text/javascript" src="https://sbhi.app/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js" id="wp-polyfill-inert-js"></script>
-    <script type="text/javascript" src="https://sbhi.app/wp-includes/js/dist/vendor/regenerator-runtime.min.js" id="regenerator-runtime-js"></script>
-    <script type="text/javascript" src="https://sbhi.app/wp-includes/js/dist/vendor/wp-polyfill.min.js" id="wp-polyfill-js"></script>
-    <script type="text/javascript" src="https://sbhi.app/wp-includes/js/dist/dom-ready.min.js" id="wp-dom-ready-js"></script>
-    <script type="text/javascript" src="https://sbhi.app/wp-content/plugins/auto-terms-of-service-and-privacy-policy/js/base.js" id="wpautoterms_base-js"></script>
-
-    <script type="text/javascript" async src="https://static.addtoany.com/menu/page.js" id="addtoany-core-js"></script>
-    <script type="text/javascript" async src="https://sbhi.app/wp-content/plugins/add-to-any/addtoany.min.js" id="addtoany-jquery-js"></script>
-    <script type="text/javascript" src="https://sbhi.app/wp-content/plugins/bbpowerpack/assets/js/jquery.cookie.min.js" id="jquery-cookie-js"></script>
-    <script type="text/javascript" src="https://sbhi.app/wp-content/plugins/five9/assets/js/frontend.min.js" id="five9-frontend-js"></script>
-    <script type="text/javascript" src="https://sbhi.app/wp-content/themes/us-health/js/main.js" id="main-js-js"></script>
-
-    <script type="text/javascript" src="https://sbhi.app/wp-content/themes/us-health/js/scripts.js" id="scripts-js-js"></script>
-    <script type="text/javascript" src="https://sbhi.app/wp-content/plugins/mobile-menu/includes/js/mobmenu.js" id="mobmenujs-js"></script>
-    <link rel="https://api.w.org/" href="https://sbhi.app/wp-json/" />
-    <link rel="alternate" type="application/json" href="https://sbhi.app/wp-json/wp/v2/pages/5" />
-    <link rel="alternate" type="application/json+oembed" href="https://sbhi.app/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ushealthgroup.com%2F" />
-    <link rel="alternate" type="text/xml+oembed" href="https://sbhi.app/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ushealthgroup.com%2F&#038;format=xml" />
-
-    <link rel="apple-touch-icon" href="https://sbhi.app/wp-content/uploads/2020/03/Group-96.png" />
-    <meta name="msapplication-TileImage" content="https://sbhi.app/wp-content/uploads/2020/03/Group-96.png" />
-
+    <link rel='stylesheet' id='font-awesome-5-css' href='https://sbhi-public.s3.us-east-2.amazonaws.com/fonts/all.min.css' type='text/css' media='all' />
     <style type="text/css" id="wp-custom-css">
         .gclid, .pubId {
             display: none;
@@ -622,7 +588,7 @@
                                             <div class="fl-photo fl-photo-align-center" itemscope itemtype="https://schema.org/ImageObject">
                                                 <div class="fl-photo-content fl-photo-img-svg">
                                                     <a href="/" target="_self" itemprop="url">
-                                                        <img loading="lazy" decoding="async" class="fl-photo-img wp-image-17663 size-full" src="~/images/SBHealthInsuranceLogo.svg" alt="USHEALTH Group Logo" itemprop="image" height="68" width="193" title="UShealth-logo" data-no-lazy="1" />
+                                                        <img loading="lazy" decoding="async" class="fl-photo-img wp-image-17663 size-full" src="https://sbhi-public.s3.us-east-2.amazonaws.com/images/SBHealthInsuranceLogo.svg" alt="USHEALTH Group Logo" itemprop="image" height="68" width="193" title="UShealth-logo" data-no-lazy="1" />
                                                     </a>
                                                 </div>
                                             </div>
@@ -679,7 +645,7 @@
                                         <div class="fl-module-content fl-node-content">
                                             <div class="pp-advanced-menu pp-advanced-menu-accordion-collapse pp-menu-default pp-menu-align-right pp-menu-position-below">
                                                 <div class="pp-advanced-menu-mobile">
-                                                    <button class="pp-advanced-menu-mobile-toggle hamburger" tabindex="0" aria-label="Menu">
+                                                    <button class="pp-advanced-menu-mobile-toggle hamburger" aria-label="Menu">
                                                         <div class="pp-hamburger"><div class="pp-hamburger-box"><div class="pp-hamburger-inner"></div></div></div>
                                                     </button>
                                                 </div>
@@ -688,7 +654,7 @@
 
                                                     <ul id="menu-main-menu" class="menu pp-advanced-menu-horizontal pp-toggle-plus">
                                                         <li id="menu-item-17810" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children pp-has-submenu">
-                                                            <div class="pp-has-submenu-container"><a href="https://sbhi.app/about/"><span class="menu-item-text">About<span class="pp-menu-toggle" tabindex="0" aria-expanded="false" aria-label="About: submenu" role="button"></span></span></a></div>
+                                                            <div class="pp-has-submenu-container"><a href="https://sbhi.app/about/"><span class="menu-item-text">About<span class="pp-menu-toggle" aria-expanded="false" aria-label="About: submenu" role="button"></span></span></a></div>
                                                             <ul class="sub-menu">
                                                                 <li id="menu-item-17946" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://sbhi.app/Blog/"><span class="menu-item-text">Blog</span></a></li>
                                                                 <li id="menu-item-17970" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://sbhi.app/Awards/"><span class="menu-item-text">Awards</span></a></li>
@@ -696,7 +662,7 @@
                                                             </ul>
                                                         </li>
                                                         <li id="menu-item-19440" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://sbhi.app/member-services/"><span class="menu-item-text">Member Services</span></a></li>
-                                                        <li id="menu-item-17816" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children pp-has-submenu"><div class="pp-has-submenu-container"><a href="https://sbhi.app/products/"><span class="menu-item-text">Products<span class="pp-menu-toggle" tabindex="0" aria-expanded="false" aria-label="Products: submenu" role="button"></span></span></a></div><ul class="sub-menu">	<li id="menu-item-20392" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://sbhi.app/product/premieradvantage/"><span class="menu-item-text">PremierAdvantage</span></a></li>	<li id="menu-item-17992" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://sbhi.app/product/premierchoice/"><span class="menu-item-text">PremierChoice</span></a></li>	<li id="menu-item-17996" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://sbhi.app/product/secureadvantage/"><span class="menu-item-text">SecureAdvantage</span></a></li>	<li id="menu-item-20164" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://sbhi.app/product/healthaccessplus/"><span class="menu-item-text">HealthAccess Plus</span></a></li>	<li id="menu-item-18011" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://sbhi.app/product/medguard/"><span class="menu-item-text">MedGuard</span></a></li>	<li id="menu-item-19838" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://sbhi.com/product/accidentprotector/"><span class="menu-item-text">Accident Protector</span></a></li>	<li id="menu-item-18024" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://sbhi.app/product/incomeprotector/"><span class="menu-item-text">IncomeProtector</span></a></li>	<li id="menu-item-18015" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://sbhi.app/product/lifeprotector/"><span class="menu-item-text">LifeProtector</span></a></li>	<li id="menu-item-18002" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://sbhi.app/product/securedental/"><span class="menu-item-text">SecureDental</span></a></li>	<li id="menu-item-19835" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://sbhi.com/product/premiervision/"><span class="menu-item-text">PremierVision</span></a></li></ul></li>
+                                                        <li id="menu-item-17816" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children pp-has-submenu"><div class="pp-has-submenu-container"><a href="https://sbhi.app/products/"><span class="menu-item-text">Products<span class="pp-menu-toggle" aria-expanded="false" aria-label="Products: submenu" role="button"></span></span></a></div><ul class="sub-menu">	<li id="menu-item-20392" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://sbhi.app/product/premieradvantage/"><span class="menu-item-text">PremierAdvantage</span></a></li>	<li id="menu-item-17992" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://sbhi.app/product/premierchoice/"><span class="menu-item-text">PremierChoice</span></a></li>	<li id="menu-item-17996" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://sbhi.app/product/secureadvantage/"><span class="menu-item-text">SecureAdvantage</span></a></li>	<li id="menu-item-20164" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://sbhi.app/product/healthaccessplus/"><span class="menu-item-text">HealthAccess Plus</span></a></li>	<li id="menu-item-18011" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://sbhi.app/product/medguard/"><span class="menu-item-text">MedGuard</span></a></li>	<li id="menu-item-19838" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://sbhi.com/product/accidentprotector/"><span class="menu-item-text">Accident Protector</span></a></li>	<li id="menu-item-18024" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://sbhi.app/product/incomeprotector/"><span class="menu-item-text">IncomeProtector</span></a></li>	<li id="menu-item-18015" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://sbhi.app/product/lifeprotector/"><span class="menu-item-text">LifeProtector</span></a></li>	<li id="menu-item-18002" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://sbhi.app/product/securedental/"><span class="menu-item-text">SecureDental</span></a></li>	<li id="menu-item-19835" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://sbhi.com/product/premiervision/"><span class="menu-item-text">PremierVision</span></a></li></ul></li>
                                                         <li id="menu-item-19707" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://sbhi.app/markets-served/"><span class="menu-item-text">Markets Served</span></a></li>
                                                         <li id="menu-item-17823" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://sbhi.app/hope/"><span class="menu-item-text">Mission of HOPE</span></a></li>
                                                         <li id="menu-item-18937" class="menu-visible-sm menu-item menu-item-type-custom menu-item-object-custom"><a href="/become-an-agent/"><span class="menu-item-text">Become an Agent</span></a></li>
@@ -738,7 +704,7 @@
                                                     </p>
                                                     <script type="text/javascript"></script>
                                                     <div class='gf_browser_chrome gform_wrapper gform_legacy_markup_wrapper gform-theme--no-framework' data-form-theme='legacy' data-form-index='0' id='gform_wrapper_4'>
-                                                        <div id='gf_4' class='gform_anchor' tabindex='-1'></div>
+                                                        <div id='gf_4' class='gform_anchor' ></div>
                                                         <div class='gform_heading'>
                                                             <p class='gform_description'></p>
                                                         </div><form method='post' enctype='multipart/form-data' target='gform_ajax_frame_4' id='gform_4' action='/#gf_4' data-formid='4' novalidate>
@@ -746,13 +712,13 @@
                                                                 <ul id='gform_fields_4' class='gform_fields top_label form_sublabel_below description_below validation_below'>
                                                                     <li id="field_4_3" class="gfield gfield--type-email gf_right_half gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible" data-js-reload="field_4_3">
                                                                         <label class='gfield_label gform-field-label' for='input_4_3'>Email<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_email'>
-                                                                            <input name='input_3' id='input_4_3' type='email' value='' class='large' tabindex='10' placeholder='Email' aria-required="true" aria-invalid="false" />
+                                                                            <input name='input_3' id='input_4_3' type='email' value='' class='large' tabindex='0' placeholder='Email' aria-required="true" aria-invalid="false" />
                                                                         </div>
                                                                     </li>
                                                                 </ul>
                                                             </div>
                                                             <div class='gform_footer top_label'>
-                                                                <input type='submit' id='gform_submit_button_4' class='gform_button button' value='Subscribe' tabindex='11' onclick='if(window["gf_submitting_4"]){return false;}  if( !jQuery("#gform_4")[0].checkValidity || jQuery("#gform_4")[0].checkValidity()){window["gf_submitting_4"]=true;}  ' onkeypress='if( event.keyCode == 13 ){ if(window["gf_submitting_4"]){return false;} if( !jQuery("#gform_4")[0].checkValidity || jQuery("#gform_4")[0].checkValidity()){window["gf_submitting_4"]=true;}  jQuery("#gform_4").trigger("submit",[true]); }' /> <input type='hidden' name='gform_ajax' value='form_id=4&amp;title=&amp;description=1&amp;tabindex=100&amp;theme=legacy' />
+                                                                <input type='submit' id='gform_submit_button_4' class='gform_button button' value='Subscribe' tabindex='0' onclick='if(window["gf_submitting_4"]){return false;}  if( !jQuery("#gform_4")[0].checkValidity || jQuery("#gform_4")[0].checkValidity()){window["gf_submitting_4"]=true;}  ' onkeypress='if( event.keyCode == 13 ){ if(window["gf_submitting_4"]){return false;} if( !jQuery("#gform_4")[0].checkValidity || jQuery("#gform_4")[0].checkValidity()){window["gf_submitting_4"]=true;}  jQuery("#gform_4").trigger("submit",[true]); }' /> <input type='hidden' name='gform_ajax' value='form_id=4&amp;title=&amp;description=1&amp;tabindex=100&amp;theme=legacy' />
                                                                 <input type='hidden' class='gform_hidden' name='is_submit_4' value='1' />
                                                                 <input type='hidden' class='gform_hidden' name='gform_submit' value='4' />
 
@@ -766,12 +732,6 @@
                                                             <p style="display: none !important;" class="akismet-fields-container" data-prefix="ak_"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="124" /><script>document.getElementById("ak_js_1").setAttribute("value", (new Date()).getTime());</script></p>
                                                         </form>
                                                     </div>
-                                                    <iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_4' id='gform_ajax_frame_4' title='This iframe contains the logic required to handle Ajax powered Gravity Forms.'></iframe>
-                                                    <script type="text/javascript">
-                                                        /* <![CDATA[ */
-                                                        gform.initializeOnLoaded(function () { gformInitSpinner(4, 'https://sbhi.app/wp-content/plugins/gravityforms/images/spinner.svg', true); jQuery('#gform_ajax_frame_4').on('load', function () { var contents = jQuery(this).contents().find('*').html(); var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0; if (!is_postback) { return; } var form_content = jQuery(this).contents().find('#gform_wrapper_4'); var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_4').length > 0; var is_redirect = contents.indexOf('gformRedirect(){') >= 0; var is_form = form_content.length > 0 && !is_redirect && !is_confirmation; var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100; if (is_form) { jQuery('#gform_wrapper_4').html(form_content.html()); if (form_content.hasClass('gform_validation_error')) { jQuery('#gform_wrapper_4').addClass('gform_validation_error'); } else { jQuery('#gform_wrapper_4').removeClass('gform_validation_error'); } setTimeout(function () { /* delay the scroll by 50 milliseconds to fix a bug in chrome */ jQuery(document).scrollTop(jQuery('#gform_wrapper_4').offset().top - mt); }, 50); if (window['gformInitDatepicker']) { gformInitDatepicker(); } if (window['gformInitPriceFields']) { gformInitPriceFields(); } var current_page = jQuery('#gform_source_page_number_4').val(); gformInitSpinner(4, 'https://sbhi.app/wp-content/plugins/gravityforms/images/spinner.svg', true); jQuery(document).trigger('gform_page_loaded', [4, current_page]); window['gf_submitting_4'] = false; } else if (!is_redirect) { var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html(); if (!confirmation_content) { confirmation_content = contents; } jQuery('#gform_wrapper_4').replaceWith(confirmation_content); jQuery(document).scrollTop(jQuery('#gf_4').offset().top - mt); jQuery(document).trigger('gform_confirmation_loaded', [4]); window['gf_submitting_4'] = false; wp.a11y.speak(jQuery('#gform_confirmation_message_4').text()); } else { jQuery('#gform_4').append(contents); if (window['gformRedirect']) { gformRedirect(); } } jQuery(document).trigger("gform_pre_post_render", [{ formId: "4", currentPage: "current_page", abort: function () { this.preventDefault(); } }]); if (event && event.defaultPrevented) { return; } const gformWrapperDiv = document.getElementById("gform_wrapper_4"); if (gformWrapperDiv) { const visibilitySpan = document.createElement("span"); visibilitySpan.id = "gform_visibility_test_4"; gformWrapperDiv.insertAdjacentElement("afterend", visibilitySpan); } const visibilityTestDiv = document.getElementById("gform_visibility_test_4"); let postRenderFired = false; function triggerPostRender() { if (postRenderFired) { return; } postRenderFired = true; jQuery(document).trigger('gform_post_render', [4, current_page]); gform.utils.trigger({ event: 'gform/postRender', native: false, data: { formId: 4, currentPage: current_page } }); if (visibilityTestDiv) { visibilityTestDiv.parentNode.removeChild(visibilityTestDiv); } } function debounce(func, wait, immediate) { var timeout; return function () { var context = this, args = arguments; var later = function () { timeout = null; if (!immediate) func.apply(context, args); }; var callNow = immediate && !timeout; clearTimeout(timeout); timeout = setTimeout(later, wait); if (callNow) func.apply(context, args); }; } const debouncedTriggerPostRender = debounce(function () { triggerPostRender(); }, 200); if (visibilityTestDiv && visibilityTestDiv.offsetParent === null) { const observer = new MutationObserver((mutations) => { mutations.forEach((mutation) => { if (mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null) { debouncedTriggerPostRender(); observer.disconnect(); } }); }); observer.observe(document.body, { attributes: true, childList: false, subtree: true, attributeFilter: ['style', 'class'], }); } else { triggerPostRender(); } }); });
-                                                        /* ]]> */
-                                                    </script>
                                                 </div>
                                             </div>
                                         </div>
@@ -783,7 +743,7 @@
                                     <div class="fl-module fl-module-rich-text fl-node-5e3851e9929b5 footer-newsletter-terms" data-node="5e3851e9929b5">
                                         <div class="fl-module-content fl-node-content">
                                             <div class="fl-rich-text">
-                                                <p>By signing up, you are agreeing to our <a href="https://www.uhc.com/content/dam/uhcdotcom/en/npp/OSPP-USHealthGroup-EN.pdf" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://www.uhc.com/content/dam/uhcdotcom/en/npp/TOU-USHealthGroup-EN.pdf" target="_blank" rel="noopener">Terms of Use</a>. You can unsubscribe at any time.</p>
+                                                <p>By signing up, you are agreeing to our <a href="https://sbhi-public.s3.us-east-2.amazonaws.com/OSPP-USHealthGroup-EN.pdf" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://www.uhc.com/content/dam/uhcdotcom/en/npp/TOU-USHealthGroup-EN.pdf" target="_blank" rel="noopener">Terms of Use</a>. You can unsubscribe at any time.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -802,19 +762,19 @@
                                                 </span>
                                                 <span class="pp-social-icon" itemscope itemtype="https://schema.org/Organization">
                                                     <link itemprop="url" href="https://www.ushealthgroup.com">
-                                                    <a itemprop="sameAs" href="https://twitter.com/ushealth_group" target="_blank" title="" aria-label="" role="button" rel="noopener noreferrer external">
+                                                    <a itemprop="sameAs" href="https://twitter.com/ushealth_group" target="_blank" title="Twitter" aria-label="Twitter" role="button" rel="noopener noreferrer external">
                                                         <i class="ua-icon ua-icon-twitter2"></i>
                                                     </a>
                                                 </span>
                                                 <span class="pp-social-icon" itemscope itemtype="https://schema.org/Organization">
                                                     <link itemprop="url" href="https://www.ushealthgroup.com">
-                                                    <a itemprop="sameAs" href="https://www.linkedin.com/company/ushealthgroup/" target="_blank" title="" aria-label="" role="button" rel="noopener noreferrer external">
+                                                    <a itemprop="sameAs" href="https://www.linkedin.com/company/ushealthgroup/" target="_blank" title="LinkedIn" aria-label="LinkedIn" role="button" rel="noopener noreferrer external">
                                                         <i class="ua-icon ua-icon-linkedin2"></i>
                                                     </a>
                                                 </span>
                                                 <span class="pp-social-icon" itemscope itemtype="https://schema.org/Organization">
                                                     <link itemprop="url" href="https://www.ushealthgroup.com">
-                                                    <a itemprop="sameAs" href="https://www.instagram.com/ushealth_group/" target="_blank" title="" aria-label="" role="button" rel="noopener noreferrer external">
+                                                    <a itemprop="sameAs" href="https://www.instagram.com/ushealth_group/" target="_blank" title="Instagram" aria-label="Instagram" role="button" rel="noopener noreferrer external">
                                                         <i class="ua-icon ua-icon-instagram"></i>
                                                     </a>
                                                 </span>
@@ -870,8 +830,8 @@
                                                                 <a href="/about/">About Us</a><br />
                                                                 <a href="/ppo-networks/">PPO Networks</a><br />
                                                                 <a href="/contact-us/">Contact Home Office</a><br />
-                                                                <a href="https://www.uhc.com/content/dam/uhcdotcom/en/npp/OSPP-USHealthGroup-EN.pdf" target="_blank" rel="noopener">Privacy Policy</a><br />
-                                                                <a href="https://www.uhc.com/content/dam/uhcdotcom/en/npp/HealthDataPrivacyPolicy-EN.pdf" target="_blank" rel="noopener">Health Data Privacy Policy</a>
+                                                                <a href="https://sbhi-public.s3.us-east-2.amazonaws.com/OSPP-USHealthGroup-EN.pdf" target="_blank" rel="noopener">Privacy Policy</a><br />
+                                                                <a href="https://sbhi-public.s3.us-east-2.amazonaws.com/HealthDataPrivacyPolicy-EN.pdf" target="_blank" rel="noopener">Health Data Privacy Policy</a>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -926,7 +886,7 @@
                                                     <div class="layout-3-wrapper">
                                                         <div class="pp-icon-wrapper animated">
                                                             <div class="pp-infobox-image">
-                                                                <img decoding="async" src="https://sbhi.app/wp-content/uploads/2020/02/pin.svg" alt="pin" />
+                                                                <img decoding="async" src="https://sbhi-public.s3.us-east-2.amazonaws.com/images/pin.svg" alt="pin" />
                                                             </div>
                                                         </div>
                                                         <div class="pp-heading-wrapper">
@@ -951,7 +911,7 @@
                                                     <div class="layout-3-wrapper">
                                                         <div class="pp-icon-wrapper animated">
                                                             <div class="pp-infobox-image">
-                                                                <img decoding="async" src="https://sbhi.app/wp-content/uploads/2020/02/phone.svg" alt="phone" />
+                                                                <img decoding="async" src="https://sbhi-public.s3.us-east-2.amazonaws.com/images/phone.svg" alt="phone" />
                                                             </div>
                                                         </div>
                                                         <div class="pp-heading-wrapper">
@@ -976,7 +936,7 @@
                                                     <div class="layout-3-wrapper">
                                                         <div class="pp-icon-wrapper animated">
                                                             <div class="pp-infobox-image">
-                                                                <img decoding="async" src="https://sbhi.app/wp-content/uploads/2020/02/close-envelope-2.svg" alt="close-envelope (2)" />
+                                                                <img decoding="async" src="https://sbhi-public.s3.us-east-2.amazonaws.com/images/close-envelope-2.svg" alt="close-envelope (2)" />
                                                             </div>
                                                         </div>
                                                         <div class="pp-heading-wrapper">
@@ -1005,7 +965,7 @@
                                                     <div class="layout-3-wrapper">
                                                         <div class="pp-icon-wrapper animated">
                                                             <div class="pp-infobox-image">
-                                                                <img decoding="async" src="https://sbhi.app/wp-content/uploads/2020/02/clock.svg" alt="clock" />
+                                                                <img decoding="async" src="https://sbhi-public.s3.us-east-2.amazonaws.com/images/clock.svg" alt="clock" />
                                                             </div>
                                                         </div>
                                                         <div class="pp-heading-wrapper">
@@ -1030,7 +990,7 @@
                                                     <div class="layout-3-wrapper">
                                                         <div class="pp-icon-wrapper animated">
                                                             <div class="pp-infobox-image">
-                                                                <img decoding="async" src="https://sbhi.app/wp-content/uploads/2020/02/megaphone-2.svg" alt="megaphone (2)" />
+                                                                <img decoding="async" src="https://sbhi-public.s3.us-east-2.amazonaws.com/images/megaphone-2.svg" alt="megaphone (2)" />
                                                             </div>
                                                         </div>
                                                         <div class="pp-heading-wrapper">
@@ -1082,7 +1042,7 @@
                                     <div class="fl-module fl-module-rich-text fl-node-5e384b812cd38" data-node="5e384b812cd38">
                                         <div class="fl-module-content fl-node-content">
                                             <div class="fl-rich-text">
-                                                <p>Copyright 2024 © JMG Marketing All rights reserved | <a href="https://sbhi.app/sitemap/">Sitemap</a></p>
+                                                <p>Copyright 2024 © US Health Group All rights reserved </p>
                                             </div>
                                         </div>
                                     </div>
@@ -1135,12 +1095,6 @@
             </div>
         </div><div class="mob-menu-right-bg-holder"></div>
     </div>
-
-    <link rel='stylesheet' id='gforms_reset_css-css' href='https://sbhi.app/wp-content/plugins/gravityforms/legacy/css/formreset.min.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='gforms_formsmain_css-css' href='https://sbhi.app/wp-content/plugins/gravityforms/legacy/css/formsmain.min.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='gforms_ready_class_css-css' href='https://sbhi.app/wp-content/plugins/gravityforms/legacy/css/readyclass.min.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='gforms_browsers_css-css' href='https://sbhi.app/wp-content/plugins/gravityforms/legacy/css/browsers.min.css' type='text/css' media='all' />
-
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
